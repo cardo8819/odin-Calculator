@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: "DSEG14-Modern";
+    src: url("https://res.cloudinary.com/andrescaroc/raw/upload/v1582781622/DSEG14Modern-RegularItalic_t7zez4.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+body {
+    min-width: 300px;
+    background-color: rgb(51, 49, 49);
+    font-family: "Roboto", sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 500px;
+    max-width: 400px;
+    background-color: black;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.5);
+    border: 1px solid silver;
+}
+
+#screen {
+    width: 100%;
+    height: 20%;
+    border: none;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+   justify-content: space-between;
+    align-items: end;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    font-family: "DSEG14-Modern", sans-serif;
+}
+
+#previous-operand {
+    font-size: 16px;
+}
+
+#current-operand {
+    font-size: 27px;
+}
+
+
+#pad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 2px;
+    cursor: pointer;
+    height: 80%;
+}
+
+#pad button {
+    border: none;
+    border: 1px solid;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.5);
+    outline: none;
+    border: none;
+    font-size: 22px;
+}
+
+.clear,
+.delete,
+.minus {
+    background-color: lightgrey;
+}
+
+.calc {
+    background-color: grey;
+    color: white;
+}
+
+#author {
+    margin-top: 20px;
+    text-align: center;
+    color: lightgray;
+    font-size: 14px;
+}
+
+.operator,
+.equals {
+    background-color: orange !important;
+    color: white !important;
+}
+
+.btn:hover {
+    background-color: rgb(169, 169, 177) !important;
+}
+
+.btn:active {
+    box-shadow: none !important;
+}
+
+.decimal {
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.5) !important;
+}
+
+.span {
+    grid-column: span 2;
+}
+
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+    #calculator {
+        height: 80vh;
+        max-height: 100%;
+    }
+    #current-operand{
+        font-size: 20px;
+    }
+    #previous-operand{
+        font-size: 14px;
+    }
+    #screen{
+        padding: 0;
+    }
+}
